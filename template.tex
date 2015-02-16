@@ -343,21 +343,23 @@ Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run &
 
 For figures, it is better to put the caption below the figure. See Figure \ref{fig:map}. Whenever possible, you should save your figure as a vector-based PDF file. PDF files that were converted from a JPG file do not look good. Compare Figures \ref{fig:map-pdf} and \ref{fig:map-jpg}. As you have already seen in Figure \ref{fig:side-by-side}, you can put figures side by side.
 
+If you are using \texttt{MATLAB} to generate figures, read \url{http://stom.chkwon.net/matlab} for some examples using \texttt{save2pdf}.
+
 
 
 \begin{figure} \centering
 \begin{subfigure}[b]{0.4\textwidth}
-\includegraphics[width=2in]{map}
+\includegraphics[width=\textwidth]{map}
 \caption{Vector-based PDF}
 \label{fig:map-pdf}
 \end{subfigure}
 %
 \begin{subfigure}[b]{0.4\textwidth}
-\includegraphics[width=4in]{map-jpg}
+\includegraphics[width=\textwidth]{map-jpg}
 \caption{PDF converted from JPG}
 \label{fig:map-jpg}
 \end{subfigure}
-\caption{Figures side by side using \texttt{subfigure}. Zoom in to see the differences.}
+\caption{Figures side by side using \texttt{subfigure}. Zoom in and out to see the difference.}
 \label{fig:side-by-side}
 \end{figure}
 
