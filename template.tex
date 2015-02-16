@@ -11,7 +11,8 @@
 
 \usepackage{amsmath} \allowdisplaybreaks
 \usepackage{amssymb}
-\usepackage{amsthm} \theoremstyle{definition}
+\usepackage{amsthm} 
+%\theoremstyle{definition}    % if you want normal upright font styles for theorems.
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{assumption}{Assumption}
@@ -23,11 +24,12 @@
 \usepackage{bibentry}
 
 
-\usepackage{booktabs}
+\usepackage{booktabs} % for toprule, midrule, bottomrule
 \usepackage{graphicx}
 \usepackage{appendix}
 \usepackage[counterclockwise]{rotating} % for sidewaystable
-\usepackage{subcaption}
+\usepackage{subcaption} % for subfigure
+\usepackage[normalem]{ulem} % for uline
 
 \usepackage{url}
 \usepackage[bookmarks=false,hidelinks]{hyperref}
@@ -97,13 +99,13 @@ This document provides some useful tips as well as serve a template for writing 
 
 
 
-\section{Test} \label{sec:paragraph}
+\section{Text} \label{sec:paragraph}
 In LaTeX, just enter an empty line for a new paragraph.
 
 Like this. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
 
-Don't use double backslashed to change a line. Backslashed will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
-If you use double backslashes to change a line, it will look very bad. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
+\uline{Don't use double backslashed for a new paragraph.} Backslashed will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
+\uline{If you use double backslashes for a new paragraph, it will look very bad.} Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
 
 If you want to \emph{emphasize} some \emph{words}, use \emph{emph}, instead of \textit{textit}.
 
@@ -218,6 +220,33 @@ If you like curly brackets:
 							  a_{1n} & \cdots & a_{nn}  \end{pmatrix}
 \]
 
+
+
+\section{Theorem}
+
+You can write a theorem with a proof.
+
+\begin{theorem} \label{thm:fundamental}
+If one is not drunken, the following is true:
+\begin{equation}
+	1 + 2 = c
+\end{equation}
+where $c$ is a constant that represents 3.
+\end{theorem}
+\begin{proof}
+Obvious.
+\end{proof}
+
+\begin{definition}
+Definition...............
+\end{definition}
+
+\begin{lemma}
+Lemma............
+\end{lemma}
+\begin{proof}
+We can prove this lemma by using Theorem \ref{thm:fundamental}.
+\end{proof}
 
 
 
