@@ -93,7 +93,7 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 
 \title{A LaTeX Template for Writing Papers}
 \author{Author Name \and Another Name \and Changhyun Kwon\footnote{Corresponding Author: \email{chkwon@buffalo.edu}}}
-\date{Department of Industrial and Systems Engineering\\University at Buffalo\\[0.5cm] February 16, 2015}
+\date{Department of Industrial and Systems Engineering\\University at Buffalo\\[0.5cm] February 17, 2015}
 
 %\usepackage{showlabels} 
 %\usepackage[final]{showlabels}
@@ -108,23 +108,64 @@ This document provides some useful tips as well as serve a template for writing 
 \end{abstract}
 
 
+\rednote{You need to open \texttt{template.tex} file and read it. Compare \texttt{.tex} file with the output \texttt{.pdf} file as you read \texttt{.tex} file.}
+
+
+\section{Editor} \label{sec:editor}
+
+For most people, I recommend TeXworks (a text editor) for editing .tex files and JabRef (a reference management tool) for editing .bib files. Mac users can also use TeXShop and BibDesk, alternatively. TeXworks comes with your LaTeX distribution (TeXLive recommended). You can download/install JabRef for free.
+
+TeXworks has a built-in PDF viewer. The best part of TeXworks is forward/backward PDF sync. After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file. It will send you to the corresponding part in the output PDF file. While reading your PDF file (in TeXworks), also do `Ctrl + Clik' or `Command + Click' on some text part in the .pdf file. It will again send you to the corresponding part in the source TeX file. Use this functionality to read this document. 
+
+
+
+
+
+
+
+
+
+
 
 \section{Text} \label{sec:paragraph}
 In LaTeX, just enter an empty line for a new paragraph.
 
 Like this. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
 
-\uline{Don't use double backslashed for a new paragraph.} Backslashed will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
+And like this. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da.
+
+\uline{Don't use double backslashes for a new paragraph.} Backslashes will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
 \uline{If you use double backslashes for a new paragraph, it will look very bad.} Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
 
 If you want to \emph{emphasize} some \emph{words}, use \emph{emph}, instead of \textit{textit}.
 
+Quotation marks are input differently in LaTeX. ``Hello World'', not "Hello World". `linear programming', not 'linear programming'. See how different they are in the PDF output.
+
+There are different kinds of `-':
+\begin{description}
+\item [Hyphen.] shortest-path
+\item [En dash.] 1999--2015, New York--London flight, constraints \eqref{node_constraint2}--\eqref{node_constraint5}
+\item [Em dash.] Since 2007, the consensus of the economic establishment---bankers, policymakers, CEOs, stock analysts, pundits---has been catastrophically wrong.
+\item [Minus.] $-310$, $x-y$ 
+\end{description}
+Read more at \url{https://en.wikipedia.org/wiki/Dash}.
 
 
 
-\section{Citation} \label{sec:citation}
 
-You need to provide \texttt{.bib} files. Look at the end of this document for something like `bibliography'. This template uses \texttt{sample\_ref.bib}. Also learn how to use BibTex. (Google it!)
+
+
+
+
+
+
+
+
+
+
+\section{Citation and Cross-Referencing} \label{sec:citation}
+
+You need to provide \texttt{.bib} files. Look at the end of this document for something like `bibliography'. This template uses \texttt{sample\_ref.bib}. Also learn how to use BibTeX. (Google it!)
 
 \begin{itemize}
 \item Textual citation: \citet{Kwon2013rsp}
@@ -138,6 +179,20 @@ See them in action:
 \begin{quote}
 In this paper, we propose a robust optimization framework for the routing methods based on the CVaR risk measure, assuming that data are uncertain within given sets. The proposed robust optimization method is closely related to robust shortest path (RSP) problems, which find a path that minimizes the worst-case travel cost with an uncertain set of travel cost data. When the uncertain set is box-constrained, the RSP problem can be solved in polynomial time \citep{Bertsimas2003network}, while the problem is NP-hard when the uncertain set is an ellipsoid \citep{Bertsimas2004,Chaerani2005} and a set of scenarios \citep{Kouvelis1996}. We refer readers to \citet{ben2009robust} and \citet{gabrel2012recent} and references therein for general robust optimization methods. 
 \end{quote}
+
+For cross-referencing, you should \emph{never} do Section 1. You must always do Section \ref{sec:editor}. If you see ?? in your PDF, you would need to compile your LaTeX code one more time (or, some errors). Equation \eqref{node_constraint1} or (\ref{node_constraint1}). Table \ref{tbl:bad_example}. Figure \ref{fig:map}.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -234,7 +289,12 @@ If you like curly brackets:
 
 
 
-\section{Theorem}
+
+
+
+
+
+\subsection{Theorem}
 
 You can write a theorem with a proof.
 
@@ -259,6 +319,15 @@ Lemma............
 \begin{proof}
 We can prove this lemma by using Theorem \ref{thm:fundamental}.
 \end{proof}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,6 +403,18 @@ Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run &
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \section{Figures} \label{sec:figures}
 
 
@@ -367,6 +448,14 @@ If you are using \texttt{MATLAB} to generate figures, read \url{http://stom.chkw
 
 
 
+
+
+
+
+
+
+
+
 \section{Concluding Remarks}
 
 Some guidelines are provided in \url{http://stom.chkwon.net/latex}. If you have questions regarding \LaTeX, go to \url{http://tex.stackexchange.com} and ask questions to experts. I go there every day. This document has appendices. Appendix \ref{appendix:drawing} has some interesting materials.
@@ -375,11 +464,16 @@ Some guidelines are provided in \url{http://stom.chkwon.net/latex}. If you have 
 
 
 \section*{Acknowledgement}
-Thank you for reading this. This document was not supported by any agency.
+Thank you for reading this. This document was prepared by Changhyun Kwon without any support from any agency.
 
 
 \paragraph{Acknowledgement} 
-Thank you for reading this. This document was not supported by any agency.
+Thank you for reading this. This document was prepared by Changhyun Kwon without any support from any agency.
+
+
+
+
+
 
 
 
