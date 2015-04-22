@@ -9,4 +9,4 @@ Read and compare `template.tex` and `template.pdf`.
 
 # Presentation Slides
 
-For presentation slides, [`beamer`](https://en.wikipedia.org/wiki/Beamer_(LaTeX)) is recommended. I create a template using colors and logos of the University at Buffalo. Check `Presentation Slides/UB`.
+For presentation slides, [`beamer`](https://en.wikipedia.org/wiki/Beamer_(LaTeX)) is recommended. I create a template using colors and logos of the University at Buffalo. Check https://github.com/chkwon/UB_Beamer_Template.
