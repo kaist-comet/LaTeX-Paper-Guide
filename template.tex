@@ -93,6 +93,7 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To show LaTeX code examples
 
 \usepackage{fancyvrb,listings}
 \lstset{
@@ -106,18 +107,21 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
  {\endVerbatimOut
  \begin{center}
  \fbox{
-	 \begin{minipage}[c]{0.53\textwidth}
+	 \begin{minipage}[c]{0.43\textwidth}
+	 \footnotesize
 	  \lstinputlisting{\jobname.tmp}
 	 \end{minipage}
    }
  \fbox{
- 	\begin{minipage}[c]{0.33\textwidth}
- 	 \input{\jobname.tmp}
+ 	\begin{minipage}[c]{0.43\textwidth}
+ 	 \small
+	 \input{\jobname.tmp}
   	\end{minipage} 
   }
   \end{center}
  }
   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
   
 
@@ -148,6 +152,10 @@ This document provides some useful tips as well as serve a template for writing 
 
 %\rednote{You need to open \texttt{template.tex} file and read it. Compare \texttt{.tex} file with the output \texttt{.pdf} file as you read \texttt{.tex} file.}
 
+\rednote{When you read this PDF file, please also read .tex file together.}
+
+\bluenote{This document contains several custom commands and packages preferred by Dr. Kwon. Graduate students of Dr. Kwon are encouraged to follow his tastes.}
+
 
 \section{Editor} \label{sec:editor}
 
@@ -172,10 +180,16 @@ Like this. blah blah blah blah blah blah blah blah blah blah blah blah blah blah
 
 And like this. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da.
 
-Don't use double backslashes \verb|\\| for a new paragraph as done in this paragraph. Double backslashes will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
-\uline{If you use double backslashes for a new paragraph, it will look very bad.} Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
 
+\subsection{Do not use backslashes}
+
+Don't use double backslashes \verb|\\| for a new paragraph as done in this paragraph. Double backslashes will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
+If you use double backslashes for a new paragraph, it will look very bad. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
+
+\subsection{Emphasizing}
 If you want to \emph{emphasize} some \emph{words}, use \verb|\emph{...words..}|, instead of \verb|\textit{...words..}|.
+
+\subsection{Quotation marks}
 
 Quotation marks are input differently in LaTeX. 
 \begin{example}
@@ -186,6 +200,9 @@ Quotation marks are input differently in LaTeX.
 'linear problem'
 \end{example}
 The key for \verb|`| is usually located left to the key for number 1.
+
+
+\subsection{Dashes}
 
 There are different kinds of `-':
 
@@ -306,9 +323,13 @@ Figure \ref{fig:map}.
 
 \section{Math} \label{sec:math}
 
+\subsection{Inline equations}
+
 \begin{example}
 Inline equations can be like $\sum_{j:(i,j)\in\Ac} x_{ij}$.
 \end{example}
+
+\subsection{Single-line equations}
 
 A single line equation:
 \begin{example}
@@ -318,7 +339,12 @@ A single line equation:
 \end{example}
 I used \verb|\Ac| as a shorthand for \verb|\mathcal{A}| to denote $\Ac$.
 
+\subsection{Notation consistency}
+
 Try to give some consistency in your notation. I usually use calligraphic letters to denote sets like set of nodes $\Nc$, set of arcs $\Ac$, set of shipments $\Sc$ as in $n\in\Nc$ or $\sum_{s\in\Sc} z_s$, and so on. Lower-case alphabets for variables like $x_{ij}$, $y_i$, and $z_j$. Upper-case roman alphabets like $N$, $A$, and $S$ for constants as in $n=1,...,N$ or $\sum_{s=1}^S x_s$. I usually use lower-case Greek letters for dual variables: $\lambda_i$, $\rho_j$, etc. Upper-case Greek letters may be some special sets or sets of dual variables: $\Lambda$, $\Theta$, etc.
+
+
+\subsection{Multiple-line equations}
 
 Multiple lines:
 \begin{example}
@@ -332,6 +358,8 @@ Multiple lines:
 \end{example}
 Note \verb|\nonumber| in the second line, and no \verb|\\| in the last line.
 
+\subsection{Single-line equations in multiple lines}
+
 A single equation that stretches to multiple lines
 \begin{example}
 \begin{multline}
@@ -342,12 +370,16 @@ A single equation that stretches to multiple lines
 \end{multline}
 \end{example}
 
+\subsection{Cross-referencing}
+
 When you want cross-referencing, do this: 
 \begin{example}
 \eqref{const1}, or \eqref{const2}--\eqref{const5}.
 \end{example}
 
-If you don't want numbering, just add *, like:
+\subsection{Equations without numbering}
+
+If you don't want numbering, just add \verb|*|, like:
 \begin{example}
 \begin{equation*}
  a + b = c 
@@ -366,6 +398,9 @@ or
  a + b & = c 
 \end{align*}
 \end{example}
+
+
+\subsection{Do not use words}
 Please do not use words for variables. 
 \begin{itemize}
 \item Don't:
@@ -390,6 +425,7 @@ depending on the context.
 \end{itemize}
 
 
+\subsection{Vectors and Matrices}
 You can use 
 \begin{example}
 $\vec{x}$ as a vector of $x_{ij}$.
@@ -449,7 +485,7 @@ If you like curly brackets:
 
 
 
-\subsection{Theorem}
+\subsection{Theorems}
 
 You can write a theorem with a proof.
 
