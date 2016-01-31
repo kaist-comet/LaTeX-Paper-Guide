@@ -98,7 +98,7 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 \usepackage{fancyvrb,listings}
 \lstset{
    breaklines=true,
-   basicstyle=\linespread{0.8}\ttfamily\footnotesize,
+   basicstyle=\linespread{0.8}\ttfamily\scriptsize,
    aboveskip=0pt,
    belowskip=0pt
 }
@@ -107,14 +107,13 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
  {\endVerbatimOut
  \begin{center}
  \fbox{
-	 \begin{minipage}[c]{0.43\textwidth}
-	 \footnotesize
+	 \begin{minipage}[c]{0.48\textwidth}
 	  \lstinputlisting{\jobname.tmp}
 	 \end{minipage}
    }
  \fbox{
- 	\begin{minipage}[c]{0.43\textwidth}
- 	 \small
+ 	\begin{minipage}[c]{0.38\textwidth}
+ 	 \scriptsize
 	 \input{\jobname.tmp}
   	\end{minipage} 
   }
@@ -161,7 +160,7 @@ This document provides some useful tips as well as serve a template for writing 
 
 For most people, I recommend TeXworks (a text editor) for editing .tex files and JabRef (a reference management tool) for editing .bib files. Mac users can also use TeXShop and BibDesk, alternatively. TeXworks comes with your LaTeX distribution (TeXLive recommended). You can download/install JabRef for free.
 
-TeXworks has a built-in PDF viewer. The best part of TeXworks is forward/backward PDF sync. After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file. It will send you to the corresponding part in the output PDF file. While reading your PDF file (in TeXworks), also do `Ctrl + Clik' or `Command + Click' on some text part in the .pdf file. It will again send you to the corresponding part in the source TeX file. Use this functionality to read this document. 
+TeXworks has a built-in PDF viewer. The best part of TeXworks is forward/backward PDF sync. After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file. It will send you to the corresponding part in the output PDF file. While reading your PDF file (in TeXworks), also do `Ctrl + Click' or `Command + Click' on some text part in the .pdf file. It will again send you to the corresponding part in the source TeX file. Use this functionality to read this document. 
 
 
 
@@ -279,7 +278,7 @@ instead of
 
 See them in action:
 \begin{quote}
-In this paper, we propose a robust optimization framework for the routing methods based on the CVaR risk measure, assuming that data are uncertain within given sets. The proposed robust optimization method is closely related to robust shortest path (RSP) problems, which find a path that minimizes the worst-case travel cost with an uncertain set of travel cost data. When the uncertain set is box-constrained, the RSP problem can be solved in polynomial time \citep{Bertsimas2003network}, while the problem is NP-hard when the uncertain set is an ellipsoid \citep{Bertsimas2004,Chaerani2005} and a set of scenarios \citep{Kouvelis1996}. We refer readers to \citet{ben2009robust} and \citet{gabrel2012recent} and references therein for general robust optimization methods. 
+When the uncertain set is box-constrained, the RSP problem can be solved in polynomial time \citep{Bertsimas2003network}, while the problem is NP-hard when the uncertain set is an ellipsoid \citep{Bertsimas2004,Chaerani2005} and a set of scenarios \citep{Kouvelis1996}. We refer readers to \citet{ben2009robust} and \citet{gabrel2012recent} and references therein for general robust optimization methods. 
 \end{quote}
 
 For cross-referencing, you should \emph{never} do 
@@ -290,7 +289,7 @@ You must always do
 \begin{example}
 Section \ref{sec:editor}.
 \end{example}
-Fine where \verb|\label{sec:editor}| is in this \verb|.tex| document.
+Find where \verb|\label{sec:editor}| is in this \verb|.tex| document.
 
 If you see ?? in your PDF, you would need to compile your LaTeX code one more time (or, some errors). 
 
