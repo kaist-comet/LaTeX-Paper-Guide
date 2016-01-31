@@ -33,6 +33,7 @@
 \usepackage{subcaption} % for subfigure
 \usepackage[normalem]{ulem} % for uline
 \usepackage{showexpl}
+\usepackage{threeparttable} % for tables with footnotes
 
 \usepackage[hyphens]{url}
 \usepackage[bookmarks=false,hidelinks]{hyperref}
@@ -566,7 +567,9 @@ Alexander	& San Francisco		&       8   &   0.000  \\
 \end{tabular}
 \end{table}
 
-When you prepare tables, please just ignore the positioning of tables in the final PDF file. I put the code for Table \ref{tbl:example} above this text and the code for Table \ref{table:8-node} below this text. Their actual locations in the output PDF file will be determined by LaTeX. Table \ref{tbl:bad_example} is a bad presentation of Table \ref{tbl:example}. Tables \ref{tbl:example}--\ref{table:8-node} are small tables. If you have a big table like Table \ref{table:EDOandLINGO}, then you can use `\texttt{sidewaystable}'. However, it is best to redesign the table and not to use sideway tables. Think one more time to decide if you really need such a big table to make your arguments clear. 
+When you prepare tables, please just ignore the positioning of tables in the final PDF file. I put the code for Table \ref{tbl:example} above this text and the code for Table \ref{table:8-node} below this text. Their actual locations in the output PDF file will be determined by LaTeX. Table \ref{tbl:bad_example} is a bad presentation of Table \ref{tbl:example}. Tables \ref{tbl:example}--\ref{table:8-node} are small tables. If you have a big table like Table \ref{table:EDOandLINGO}, then you can use `\texttt{sidewaystable}'. However, it is best to redesign the table and not to use sideway tables. Think one more time to decide if you really need such a big table to make your arguments clear. When you need a table with table-footnotes, use `\texttt{threeparttable}' as in Table \ref{table:threeparttable}.
+
+
 
 
 \begin{table}  \centering
@@ -603,6 +606,37 @@ Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run &
 
 
 
+
+
+\begin{table} \centering
+\begin{threeparttable}
+\caption{Comparison of Various Paths}
+\label{table:threeparttable}
+    \begin{tabular}{ccclr}
+    \toprule
+    Description & Path Name & Setting & Path & Worst-Case Cost \tnote{b} \\
+    \midrule
+    Nominal 
+         & $l_0$ & $\Gamma=0$ & $\{1,2,4,3,8,12,14,15\}$ & 37,016 \\ 
+    \midrule
+         & $l_1$ & $\Gamma=1$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\
+         & $l_2$ & $\Gamma=2$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\ 
+    B-S\tnote{a}     
+         & $l_3$ & $\Gamma=3$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\
+         & $l_4$ & $\Gamma=4$ & $\{1,4,3,7,12,15\}$ & 25,697 \\
+         & $l_5$ & $\Gamma=5$ & $\{1,4,3,8,12,15\}$ & 27,035 \\
+         & $l_6$ & $\Gamma=6$ & $\{1,4,3,8,12,15\}$ & 27,035 \\
+    \midrule
+    This Paper 
+         & $l^*$ & $\Gamma_u=2, \Gamma_v=3$ & $\{1,4,3,7,12,14,15\}$ & 25,314 \\
+    \bottomrule
+    \end{tabular}
+    \begin{tablenotes}
+        \item [a] \citet{Bertsimas2003network}
+        \item [b] The worst-case cost measured with the uncertainty set with $\Gamma_u=2$ and $\Gamma_v=3$.
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
 
 
 
