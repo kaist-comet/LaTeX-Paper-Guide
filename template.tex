@@ -1,4 +1,5 @@
-
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
 
 \documentclass[letterpaper, 11pt]{article}
 
@@ -12,7 +13,7 @@
 % Math related packages
 \usepackage{amsmath} \allowdisplaybreaks
 \usepackage{amssymb}
-\usepackage{amsthm} 
+\usepackage{amsthm}
 %\theoremstyle{definition}    % if you want normal upright font styles for theorems.
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -116,14 +117,14 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
  	\begin{minipage}[c]{0.38\textwidth}
  	 \scriptsize
 	 \input{\jobname.tmp}
-  	\end{minipage} 
+  	\end{minipage}
   }
   \end{center}
  }
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  
-  
+
+
 
 
 
@@ -137,7 +138,7 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 
 \date{\today}
 
-%\usepackage{showlabels} 
+%\usepackage{showlabels}
 %\usepackage[final]{showlabels}
 
 
@@ -145,7 +146,8 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 \maketitle
 
 \begin{abstract}
-This document provides some useful tips as well as serve a template for writing a paper in LaTeX. To understand how LaTeX works, you should compare the source code and the output PDF.\\
+This document provides some useful tips as well as serve a template for writing a paper in LaTeX.
+To understand how LaTeX works, you should compare the source code and the output PDF.\\
 \noindent\textbf{Keywords:} keyword1; keyword2; keyword3
 \end{abstract}
 
@@ -154,14 +156,24 @@ This document provides some useful tips as well as serve a template for writing 
 
 \rednote{When you read this PDF file, please also read .tex file together.}
 
-\bluenote{This document contains several custom commands and packages preferred by Dr. Kwon. Graduate students of Dr. Kwon are encouraged to follow his tastes.}
+\bluenote{This document contains several custom commands and packages preferred by Dr. Kwon.
+Graduate students of Dr. Kwon are encouraged to follow his tastes.}
 
 
 \section{Editor} \label{sec:editor}
 
-For most people, I recommend TeXworks (a text editor) for editing .tex files and JabRef (a reference management tool) for editing .bib files. Mac users can also use TeXShop and BibDesk, alternatively. TeXworks comes with your LaTeX distribution (TeXLive recommended). You can download/install JabRef for free.
+For most people, I recommend TeXworks (a text editor) for editing .tex files and JabRef (a reference management tool) for editing .bib files.
+Mac users can also use TeXShop and BibDesk, alternatively.
+TeXworks comes with your LaTeX distribution (TeXLive recommended).
+You can download/install JabRef for free.
 
-TeXworks has a built-in PDF viewer. The best part of TeXworks is forward/backward PDF sync. After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file. It will send you to the corresponding part in the output PDF file. While reading your PDF file (in TeXworks), also do `Ctrl + Click' or `Command + Click' on some text part in the .pdf file. It will again send you to the corresponding part in the source TeX file. Use this functionality to read this document. 
+TeXworks has a built-in PDF viewer.
+The best part of TeXworks is forward/backward PDF sync.
+After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file.
+It will send you to the corresponding part in the output PDF file.
+While reading your PDF file (in TeXworks), also do `Ctrl + Click' or `Command + Click' on some text part in the .pdf file.
+It will again send you to the corresponding part in the source TeX file.
+Use this functionality to read this document.
 
 
 
@@ -178,20 +190,45 @@ In LaTeX, just enter an empty line for a new paragraph.
 
 Like this. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
 
-And like this. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da. Ob-la-di ob-la-da.
+And like this.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
+Ob-la-di ob-la-da.
 
 
 \subsection{Do not use backslashes}
 
-Don't use double backslashes \verb|\\| for a new paragraph as done in this paragraph. Double backslashes will be used in tables and equations only. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere.  \\
-If you use double backslashes for a new paragraph, it will look very bad. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. Some random text here, there, and everywhere. 
+Don't use double backslashes \verb|\\| for a new paragraph as done in this paragraph.
+Double backslashes will be used in tables and equations only.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.  \\
+If you use double backslashes for a new paragraph, it will look very bad.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.
+Some random text here, there, and everywhere.
 
 \subsection{Emphasizing}
 If you want to \emph{emphasize} some \emph{words}, use \verb|\emph{...words..}|, instead of \verb|\textit{...words..}|.
 
 \subsection{Quotation marks}
 
-Quotation marks are input differently in LaTeX. 
+Quotation marks are input differently in LaTeX.
 \begin{example}
 ``Hello World''
 "Hello World"
@@ -214,8 +251,8 @@ shortest-path
 
 \item [En dash] is a double `-' in text mode.
 \begin{example}
-1999--2015, 
-New York--London flight, 
+1999--2015,
+New York--London flight,
 constraints \eqref{const2}--\eqref{const5}
 \end{example}
 
@@ -226,7 +263,7 @@ Since 2007, the consensus of the economic establishment---bankers, policymakers,
 
 \item [Minus] is a single `-' in math mode.
 \begin{example}
- $-310$, $x-y$ 
+ $-310$, $x-y$
 \end{example}
 \end{description}
 Read more at \url{https://en.wikipedia.org/wiki/Dash}.
@@ -246,31 +283,34 @@ Read more at \url{https://en.wikipedia.org/wiki/Dash}.
 
 \section{Citation and Cross-Referencing} \label{sec:citation}
 
-You need to provide \texttt{.bib} files. Look at the end of this document for something like `bibliography'. This template uses \verb|sample_ref.bib|. Also learn how to use BibTeX. (Google it!)
+You need to provide \texttt{.bib} files.
+Look at the end of this document for something like `bibliography'.
+This template uses \verb|sample_ref.bib|.
+Also learn how to use BibTeX. (Google it!)
 
 \begin{itemize}
-\item Textual citation: 
+\item Textual citation:
 \begin{example}
 \citet{Kwon2013rsp}
 \end{example}
 
-\item Parenthetical citation: 
+\item Parenthetical citation:
 \begin{example}
 \citep{Kwon2013rsp}
 \end{example}
 
-\item Multiple parenthetical citations: 
+\item Multiple parenthetical citations:
 
 \begin{example}
 \citep{Bertsimas2004,Chaerani2005,Kouvelis1996,gabrel2012recent}
 \end{example}
 
-\item If you need multiple \emph{textual} citations, it is better to write: 
+\item If you need multiple \emph{textual} citations, it is better to write:
 \begin{example}
-\citet{Bertsimas2004}, \citet{Chaerani2005}, \citet{Kouvelis1996}, and \citet{gabrel2012recent}, 
+\citet{Bertsimas2004}, \citet{Chaerani2005}, \citet{Kouvelis1996}, and \citet{gabrel2012recent},
 \end{example}
 
-instead of 
+instead of
 \begin{example}
 \citet{Bertsimas2004,Chaerani2005,Kouvelis1996,gabrel2012recent}.
 \end{example}
@@ -279,24 +319,25 @@ instead of
 
 See them in action:
 \begin{quote}
-When the uncertain set is box-constrained, the RSP problem can be solved in polynomial time \citep{Bertsimas2003network}, while the problem is NP-hard when the uncertain set is an ellipsoid \citep{Bertsimas2004,Chaerani2005} and a set of scenarios \citep{Kouvelis1996}. We refer readers to \citet{ben2009robust} and \citet{gabrel2012recent} and references therein for general robust optimization methods. 
+When the uncertain set is box-constrained, the RSP problem can be solved in polynomial time \citep{Bertsimas2003network}, while the problem is NP-hard when the uncertain set is an ellipsoid \citep{Bertsimas2004,Chaerani2005} and a set of scenarios \citep{Kouvelis1996}.
+We refer readers to \citet{ben2009robust} and \citet{gabrel2012recent} and references therein for general robust optimization methods.
 \end{quote}
 
-For cross-referencing, you should \emph{never} do 
+For cross-referencing, you should \emph{never} do
 \begin{example}
 Section 1.
 \end{example}
-You must always do 
+You must always do
 \begin{example}
 Section \ref{sec:editor}.
 \end{example}
 Find where \verb|\label{sec:editor}| is in this \verb|.tex| document.
 
-If you see ?? in your PDF, you would need to compile your LaTeX code one more time (or, some errors). 
+If you see ?? in your PDF, you would need to compile your LaTeX code one more time (or, some errors).
 
 Always use cross-referencing:
 \begin{example}
-Equation \eqref{const1} or (\ref{const1}). 
+Equation \eqref{const1} or (\ref{const1}).
 \end{example}
 
 \begin{example}
@@ -341,7 +382,12 @@ I used \verb|\Ac| as a shorthand for \verb|\mathcal{A}| to denote $\Ac$.
 
 \subsection{Notation consistency}
 
-Try to give some consistency in your notation. I usually use calligraphic letters to denote sets like set of nodes $\Nc$, set of arcs $\Ac$, set of shipments $\Sc$ as in $n\in\Nc$ or $\sum_{s\in\Sc} z_s$, and so on. Lower-case alphabets for variables like $x_{ij}$, $y_i$, and $z_j$. Upper-case roman alphabets like $N$, $A$, and $S$ for constants as in $n=1,...,N$ or $\sum_{s=1}^S x_s$. I usually use lower-case Greek letters for dual variables: $\lambda_i$, $\rho_j$, etc. Upper-case Greek letters may be some special sets or sets of dual variables: $\Lambda$, $\Theta$, etc.
+Try to give some consistency in your notation.
+I usually use calligraphic letters to denote sets like set of nodes $\Nc$, set of arcs $\Ac$, set of shipments $\Sc$ as in $n\in\Nc$ or $\sum_{s\in\Sc} z_s$, and so on.
+Lower-case alphabets for variables like $x_{ij}$, $y_i$, and $z_j$.
+Upper-case roman alphabets like $N$, $A$, and $S$ for constants as in $n=1,...,N$ or $\sum_{s=1}^S x_s$.
+I usually use lower-case Greek letters for dual variables: $\lambda_i$, $\rho_j$, etc.
+Upper-case Greek letters may be some special sets or sets of dual variables: $\Lambda$, $\Theta$, etc.
 
 
 \subsection{Multiple-line equations}
@@ -353,7 +399,7 @@ Multiple lines:
  a + b & = c \nonumber \\
  a + b & = c \label{const3} \\
  a + b & = c \label{const4} \\
- a + b & = c \label{const5} 
+ a + b & = c \label{const5}
 \end{align}
 \end{example}
 Note \verb|\nonumber| in the second line, and no \verb|\\| in the last line.
@@ -372,7 +418,7 @@ A single equation that stretches to multiple lines
 
 \subsection{Cross-referencing}
 
-When you want cross-referencing, do this: 
+When you want cross-referencing, do this:
 \begin{example}
 \eqref{const1}, or \eqref{const2}--\eqref{const5}.
 \end{example}
@@ -382,32 +428,32 @@ When you want cross-referencing, do this:
 If you don't want numbering, just add \verb|*|, like:
 \begin{example}
 \begin{equation*}
- a + b = c 
+ a + b = c
 \end{equation*}
 \end{example}
 or
 \begin{example}
 \[
-  a + b = c 
+  a + b = c
 \]
 \end{example}
 or
 \begin{example}
 \begin{align*}
  a + b & = c \\
- a + b & = c 
+ a + b & = c
 \end{align*}
 \end{example}
 
 
 \subsection{Do not use words}
-Please do not use words for variables. 
+Please do not use words for variables.
 \begin{itemize}
 \item Don't:
 \begin{example}
  $counter_1 = 3 + 10$
 \end{example}
-	where $counter_1$ may be confused with $c \times o \times u \times n \times t \times e \times r_1$.
+where $counter_1$ may be confused with $c \times o \times u \times n \times t \times e \times r_1$.
 
 \item Instead do:
 \begin{example}
@@ -426,11 +472,11 @@ depending on the context.
 
 
 \subsection{Vectors and Matrices}
-You can use 
+You can use
 \begin{example}
 $\vec{x}$ as a vector of $x_{ij}$.
 \end{example}
-Some matrices 
+Some matrices
 \begin{example}
 $\mat{A}$ and $\mat{B}$.
 \end{example}
@@ -438,20 +484,20 @@ $\mat{A}$ and $\mat{B}$.
 Some vectors are here:
 \begin{example}
 \[
- \vec{y} = \begin{bmatrix} 
-             3 \\ 
-             2 \\ 
-             1 
+ \vec{y} = \begin{bmatrix}
+             3 \\
+             2 \\
+             1
            \end{bmatrix}
 \]
 \end{example}
 \begin{example}
 \[
- \vec{z} = \begin{bmatrix} 
-              z_1 \\ 
-              z_2 \\ 
-              \vdots \\ 
-              z_n 
+ \vec{z} = \begin{bmatrix}
+              z_1 \\
+              z_2 \\
+              \vdots \\
+              z_n
            \end{bmatrix}
 \]
 \end{example}
@@ -460,20 +506,20 @@ Some vectors are here:
 A matrix is here:
 \begin{example}
 \[
- \mat{A} = \begin{bmatrix} 
+ \mat{A} = \begin{bmatrix}
             a_{11} & \cdots & a_{22}  \\
             \vdots & \ddots & \vdots  \\
-            a_{1n} & \cdots & a_{nn}  
+            a_{1n} & \cdots & a_{nn}
            \end{bmatrix}
 \]
 \end{example}
 If you like curly brackets:
 \begin{example}
 \[
- \mat{A} = \begin{pmatrix} 
+ \mat{A} = \begin{pmatrix}
             a_{11} & \cdots & a_{22}  \\
             \vdots & \ddots & \vdots  \\
-            a_{1n} & \cdots & a_{nn}  
+            a_{1n} & \cdots & a_{nn}
            \end{pmatrix}
 \]
 \end{example}
@@ -567,13 +613,20 @@ Alexander	& San Francisco		&       8   &   0.000  \\
 \end{tabular}
 \end{table}
 
-When you prepare tables, please just ignore the positioning of tables in the final PDF file. I put the code for Table \ref{tbl:example} above this text and the code for Table \ref{table:8-node} below this text. Their actual locations in the output PDF file will be determined by LaTeX. Table \ref{tbl:bad_example} is a bad presentation of Table \ref{tbl:example}. Tables \ref{tbl:example}--\ref{table:8-node} are small tables. If you have a big table like Table \ref{table:EDOandLINGO}, then you can use `\texttt{sidewaystable}'. However, it is best to redesign the table and not to use sideway tables. Think one more time to decide if you really need such a big table to make your arguments clear. When you need a table with table-footnotes, use `\texttt{threeparttable}' as in Table \ref{table:threeparttable}.
+When you prepare tables, please just ignore the positioning of tables in the final PDF file.
+I put the code for Table \ref{tbl:example} above this text and the code for Table \ref{table:8-node} below this text.
+Their actual locations in the output PDF file will be determined by LaTeX. Table \ref{tbl:bad_example} is a bad presentation of Table \ref{tbl:example}.
+Tables \ref{tbl:example}--\ref{table:8-node} are small tables.
+If you have a big table like Table \ref{table:EDOandLINGO}, then you can use `\texttt{sidewaystable}'.
+However, it is best to redesign the table and not to use sideway tables.
+Think one more time to decide if you really need such a big table to make your arguments clear.
+When you need a table with table-footnotes, use `\texttt{threeparttable}' as in Table \ref{table:threeparttable}.
 
 
 
 
 \begin{table}  \centering
-\caption{Arc attributes for the 8-node network, with $\rho_a$: the population density along arc $a$ and $c_a(v_a)=A_a(1 + 0.15{(v_a/l_a)}^4)$.} 
+\caption{Arc attributes for the 8-node network, with $\rho_a$: the population density along arc $a$ and $c_a(v_a)=A_a(1 + 0.15{(v_a/l_a)}^4)$.}
 \label{table:8-node}%
 \begin{tabular}{rrrrr}
 \toprule
@@ -595,7 +648,7 @@ Start & End & $A_a$ & $l_a$ & $\rho_a$ \\
 \begin{tabular}{r rrrr rrrr rrrr}
 \toprule
 & \multicolumn{4}{c}{LINGO} & \multicolumn{4}{c}{Modified EDO} & \multicolumn{4}{c}{2-Step EDO} \\
-\cmidrule(lr){2-5} \cmidrule(lr){6-9} \cmidrule(lr){10-12} 
+\cmidrule(lr){2-5} \cmidrule(lr){6-9} \cmidrule(lr){10-12}
 Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run & Objective   &    Risk &    Toll &    Run & Objective \\
      &         Type &         &  Revenue &  Time   &         & Revenue &  Time &  Gap (\%)   &         & Revenue &   Time &  Gap (\%) \\
 \midrule
@@ -616,18 +669,18 @@ Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run &
     \toprule
     Description & Path Name & Setting & Path & Worst-Case Cost \tnote{b} \\
     \midrule
-    Nominal 
-         & $l_0$ & $\Gamma=0$ & $\{1,2,4,3,8,12,14,15\}$ & 37,016 \\ 
+    Nominal
+         & $l_0$ & $\Gamma=0$ & $\{1,2,4,3,8,12,14,15\}$ & 37,016 \\
     \midrule
          & $l_1$ & $\Gamma=1$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\
-         & $l_2$ & $\Gamma=2$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\ 
-    B-S\tnote{a}     
+         & $l_2$ & $\Gamma=2$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\
+    B-S\tnote{a}
          & $l_3$ & $\Gamma=3$ & $\{1,4,3,8,12,14,15\}$ & 25,616 \\
          & $l_4$ & $\Gamma=4$ & $\{1,4,3,7,12,15\}$ & 25,697 \\
          & $l_5$ & $\Gamma=5$ & $\{1,4,3,8,12,15\}$ & 27,035 \\
          & $l_6$ & $\Gamma=6$ & $\{1,4,3,8,12,15\}$ & 27,035 \\
     \midrule
-    This Paper 
+    This Paper
          & $l^*$ & $\Gamma_u=2, \Gamma_v=3$ & $\{1,4,3,7,12,14,15\}$ & 25,314 \\
     \bottomrule
     \end{tabular}
@@ -660,7 +713,12 @@ Case &     Solution &    Risk &     Toll &   Run   &    Risk &    Toll &   Run &
 \label{fig:map}
 \end{figure}
 
-For figures, it is better to put the caption below the figure. See Figure \ref{fig:map}. Whenever possible, you should save your figure as a vector-based PDF file. PDF files that were converted from a JPG file do not look good. Compare Figures \ref{fig:map-pdf} and \ref{fig:map-jpg}. As you have already seen in Figure \ref{fig:side-by-side}, you can put figures side by side.
+For figures, it is better to put the caption below the figure.
+See Figure \ref{fig:map}.
+Whenever possible, you should save your figure as a vector-based PDF file.
+PDF files that were converted from a JPG file do not look good.
+Compare Figures \ref{fig:map-pdf} and \ref{fig:map-jpg}.
+As you have already seen in Figure \ref{fig:side-by-side}, you can put figures side by side.
 
 If you are using \texttt{MATLAB} to generate figures, read \url{http://stom.chkwon.net/matlab} for some examples using \texttt{save2pdf}.
 
@@ -696,17 +754,23 @@ If you are using \texttt{Excel}, read \url{https://cschleiden.wordpress.com/2009
 
 \section{Concluding Remarks}
 
-Some guidelines are provided in \url{http://stom.chkwon.net/latex}. If you have questions regarding \LaTeX, go to \url{http://tex.stackexchange.com} and ask questions to experts. I go there every day. This document has appendices. Appendix \ref{appendix:drawing} has some interesting materials.
+Some guidelines are provided in \url{http://stom.chkwon.net/latex}.
+If you have questions regarding \LaTeX, go to \url{http://tex.stackexchange.com} and ask questions to experts.
+I go there every day.
+This document has appendices.
+Appendix \ref{appendix:drawing} has some interesting materials.
 
 If you are not sure where to begin, read this: \url{https://www.ctan.org/tex-archive/info/lshort/?lang=en}.
 
 
 \section*{Acknowledgement}
-Thank you for reading this. This document was prepared by Changhyun Kwon without any support from any agency.
+Thank you for reading this.
+This document was prepared by Changhyun Kwon without any support from any agency.
 
 
-\paragraph{Acknowledgement} 
-Thank you for reading this. This document was prepared by Changhyun Kwon without any support from any agency.
+\paragraph{Acknowledgement}
+Thank you for reading this.
+This document was prepared by Changhyun Kwon without any support from any agency.
 
 
 
@@ -732,7 +796,8 @@ This is appendix.
 
 \section{Proofs} \label{appendix:proofs}
 
-You may want to collect proofs for theorems here. This is Appendix \ref{appendix:proofs}.
+You may want to collect proofs for theorems here.
+This is Appendix \ref{appendix:proofs}.
 
 \section{Data} \label{appendix:data}
 
@@ -740,14 +805,15 @@ Or maybe some data. This is Appendix \ref{appendix:data}.
 
 \section{Drawing} \label{appendix:drawing}
 
-You can also draw some figures within LaTeX. You can put it between text like this:
+You can also draw some figures within LaTeX.
+You can put it between text like this:
 \begin{center}
 \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
                     semithick]
 
   \node[state] (node3) [label=above:4] {3};
   \node[state] (node1) [above left of=node3, label=above:-5] {1};
-  \node[state] (node2) [above right of=node3, label=above:6$\leftarrow b_i$] {2};  
+  \node[state] (node2) [above right of=node3, label=above:6$\leftarrow b_i$] {2};
   \node[state] (node4) [below left of=node3, label=below:-2] {4};
   \node[state] (node5) [below right of=node3, label=below:-3] {5};
 
@@ -762,7 +828,10 @@ You can also draw some figures within LaTeX. You can put it between text like th
         ;
 \end{tikzpicture}
 \end{center}
-You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:network3}. You can also draw a network that is slightly more graphical as in Figure \ref{fig:some_network}. You can even draw a digram that is as complicated as Figure \ref{fig:complicated}. Visit \url{http://www.texample.net/tikz/examples/} for more examples and ideas.
+You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:network3}.
+You can also draw a network that is slightly more graphical as in Figure \ref{fig:some_network}.
+You can even draw a digram that is as complicated as Figure \ref{fig:complicated}.
+Visit \url{http://www.texample.net/tikz/examples/} for more examples and ideas.
 
 
 
@@ -779,8 +848,8 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
   \node[state] at(1,5) (node1) [label=left:15] {1};
   \node[state] at(1,3) (node2) [label=left:25] {2};
   \node[state] at(7,6) (node3) [label=right:-15] {3};
-  \node[state] at(7,4) (node4) [label=right:-12] {4};  
-  \node[state] at(7,2) (node5) [label=right:-13] {5};    
+  \node[state] at(7,4) (node4) [label=right:-12] {4};
+  \node[state] at(7,2) (node5) [label=right:-13] {5};
 
   \path (node1) edge node [near start]{10} (node3)
         (node1) edge node [near start, below]{7} (node4)
@@ -841,7 +910,7 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
 }
 \tikzstyle{every node}=[circle, draw, fill=black!50,
                         inner sep=2.5pt, minimum width=4pt]
-                        
+
 \node (n1) at (2,3) {};
 \node (n2) at (3,5) {};
 \node (n3) at (1,4) {};
@@ -894,19 +963,19 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
 \begin{pgfonlayer}{background}
 	\path (rt1.west |- rt1.north)+(-0.4,0.4) node (box1a) {};
 	\path (fr.east |- fr.south)+(0.4,-0.4) node (box1b) {};
-	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box1a) rectangle (box1b); 
-\end{pgfonlayer}	
-	
+	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box1a) rectangle (box1b);
+\end{pgfonlayer}
+
 \node[researchbox, above=1.6cm of case.east, anchor=east] (er) {Applied Research};
 \node[taskbox, above=3.2cm of er] (rt4) {RT 4. Global Route Planning};
 \node[taskbox, below=0.2cm of rt4] (rt5) {RT 5. Combined Location-Routing};
 \node[taskbox, below=0.2cm of rt5] (rt6) {RT 6. Government Interventions};
-	
+
 \begin{pgfonlayer}{background}
 	\path (rt4.west |- rt4.north)+(-0.4,0.4) node (box2a) {};
 	\path (er.east |- er.south)+(0.4,-0.4) node (box2b) {};
-	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box2a) rectangle (box2b); 
-\end{pgfonlayer}	
+	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box2a) rectangle (box2b);
+\end{pgfonlayer}
 
 \path (box1a -| box1b) + (0,-1cm) node (box1c) {};
 \path (box1b) + (0,1cm) node (box1d) {};
@@ -917,14 +986,14 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
 \node[babox, right=2cm of rt4] (ba1) {Reliable Network Design};
 \node[babox, below=0.3cm of ba1] (ba2) {Disaster Relief};
 \node[babox, below=0.3cm of ba2] (ba3) {Communication Networks};
-\node[babox, below=0.3cm of ba3] (ba4) {Electricity Distribution};	
-\node[babox, below=0.3cm of ba4] (ba5) {Emergency Medical Services};	
-\node[broaderbox, below=0.3cm of ba5] (ba) {Broader Applications};	
-	
+\node[babox, below=0.3cm of ba3] (ba4) {Electricity Distribution};
+\node[babox, below=0.3cm of ba4] (ba5) {Emergency Medical Services};
+\node[broaderbox, below=0.3cm of ba5] (ba) {Broader Applications};
+
 \begin{pgfonlayer}{background}
 	\path (ba1.west |- ba1.north)+(-0.4,0.4) node (box3a) {};
 	\path (ba.east |- ba.south)+(0.4,-0.4) node (box3b) {};
-	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box3a) rectangle (box3b); 
+	\path [fill=black!10, drop shadow, rounded corners, draw=black!50, dashed] (box3a) rectangle (box3b);
 \end{pgfonlayer}
 
 \path (box2a -| box2b) + (0,-1cm) node (box2c) {};
@@ -933,13 +1002,13 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
 \draw[->,thick] (box2d) -- (box2d -| box3a) ;
 
 
-		
+
 \draw[->,thick] ([xshift=-5cm]case.north) -- ([xshift=-5cm]case.north |- box1b);
-\draw[->,thick] ([xshift=-3cm]case.north) -- ([xshift=-3cm]case.north |- box1b);		
+\draw[->,thick] ([xshift=-3cm]case.north) -- ([xshift=-3cm]case.north |- box1b);
 
 \draw[->,thick] ([xshift=5cm]case.north) -- ([xshift=5cm]case.north |- box2b);
-\draw[->,thick] ([xshift=3cm]case.north) -- ([xshift=3cm]case.north |- box2b);	
-		
+\draw[->,thick] ([xshift=3cm]case.north) -- ([xshift=3cm]case.north |- box2b);
+
 \end{tikzpicture}
 \caption{Complicated diagram}
 \label{fig:complicated}
@@ -956,4 +1025,3 @@ You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:ne
 
 
 %
-
