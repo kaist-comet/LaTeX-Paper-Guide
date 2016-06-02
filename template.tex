@@ -828,7 +828,7 @@ You can put it between text like this:
         ;
 \end{tikzpicture}
 \end{center}
-You can also put them in figures like Figures \ref{fig:network2} and \ref{fig:network3}.
+You can also put them in figures like Figures \ref{fig:network2}--\ref{fig:network4}.
 You can also draw a network that is slightly more graphical as in Figure \ref{fig:some_network}.
 You can even draw a digram that is as complicated as Figure \ref{fig:complicated}.
 Visit \url{http://www.texample.net/tikz/examples/} for more examples and ideas.
@@ -892,7 +892,28 @@ Visit \url{http://www.texample.net/tikz/examples/} for more examples and ideas.
 
 
 
-
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[scale=0.3,auto,sloped]
+	\tikzstyle{every node}=[font=\footnotesize]
+	\node[shape=circle,draw] (n1) at (0,0) {1};
+	\node[shape=circle,draw] (n2) at (10,0) {2};
+	\node[shape=circle,draw] (n3) at (20,0) {3};
+	\node[shape=circle,draw] (n4) at (15,-10) {4};
+	
+	\draw[->]
+	(n1) edge node[above] {$c_{12}=20$} (n2)
+	(n2) edge node[above] {$c_{23}=4$} (n3)
+	(n2) edge node[above] {$c_{24}=2$} (n4)
+	(n4) edge node[below] {$c_{43}=3$}  (n3)
+	;
+	
+	\node[right] at (23,-6.5) {$\text{path } 1 = \{1,2,3\}$, \quad\text{path length} = 24};
+	\node[right] at (23,-8)   {$\text{path } 2 = \{1,2,4,3\}$, \quad\text{path length} = 25};
+	\end{tikzpicture}
+	\caption{Some network 4}
+	\label{fig:network4}
+\end{figure}
 
 
 
