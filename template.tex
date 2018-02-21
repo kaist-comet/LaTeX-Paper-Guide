@@ -64,6 +64,23 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 \usepackage{bm}
 \renewcommand{\vec}[1]{\bm{#1}}
 \newcommand{\mat}[1]{\bm{#1}}
+\newcommand{\set}[1]{\mathcal{#1}}
+
+% https://tex.stackexchange.com/questions/265689/ignore-greek-letters-using-mathcal
+\DeclareMathSymbol{\Gamma}{\mathord}{operators}{"00}
+\DeclareMathSymbol{\Delta}{\mathord}{operators}{"01}
+\DeclareMathSymbol{\Theta}{\mathord}{operators}{"02}
+\DeclareMathSymbol{\Lambda}{\mathord}{operators}{"03}
+\DeclareMathSymbol{\Xi}{\mathord}{operators}{"04}
+\DeclareMathSymbol{\Pi}{\mathord}{operators}{"05}
+\DeclareMathSymbol{\Sigma}{\mathord}{operators}{"06}
+\DeclareMathSymbol{\Upsilon}{\mathord}{operators}{"07}
+\DeclareMathSymbol{\Phi}{\mathord}{operators}{"08}
+\DeclareMathSymbol{\Psi}{\mathord}{operators}{"09}
+\DeclareMathSymbol{\Omega}{\mathord}{operators}{"0A}
+
+\newcommand{\LB}{\mathsf{LB}}
+\newcommand{\UB}{\mathsf{UB}}		
 
 \usepackage{xcolor}
 \newcommand{\note}[1]{{\Large\bf#1}}

@@ -1,0 +1,10 @@
+\begin{description}
+\item [Sets:] $\set{B}_i$, $\set{K}$
+\item [Vectors:] $\vec{x}$, $\vec{\xi}$
+\item [Matrices:] $\mat{A}$
+\item [Elements of vectors and matrices:] $x_j$, $\xi_j$, $a_{ij}$
+\item [Textual names:] $Z_{\text{WDP}}$, $u^{\min}$, $\mathsf{UB}$
+\item [Random variables:] $X$, $Y$
+\item [Expected value:] $\Eb[X]$, $\Eb[g(Y)]$
+\item [Set of real numbers:] $\Rb$, $\Rb^n$, $\Rb^n \times \Rb^m$, $\Rb^{n+m}$
+\end{description}

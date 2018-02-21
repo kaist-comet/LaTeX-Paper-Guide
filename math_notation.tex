@@ -1,0 +1,225 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[letterpaper, 11pt]{article}
+
+
+% layout/spacing related packages
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}\onehalfspace
+\usepackage{microtype}
+
+
+% Math related packages
+\usepackage{amsmath} \allowdisplaybreaks
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\theoremstyle{definition}    % if you want normal upright font styles for theorems.
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+
+% bibliography and reference related packcages
+\usepackage{natbib}
+\usepackage{bibentry}
+
+
+\usepackage{booktabs} % for toprule, midrule, bottomrule
+\usepackage{graphicx}
+\usepackage{appendix}
+\usepackage[counterclockwise]{rotating} % for sidewaystable
+\usepackage{subcaption} % for subfigure
+\usepackage[normalem]{ulem} % for uline
+\usepackage{showexpl}
+\usepackage{threeparttable} % for tables with footnotes
+
+\usepackage[hyphens]{url}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{automata,calc,trees,positioning,arrows,chains,shapes.geometric,%
+decorations.pathreplacing,decorations.pathmorphing,shapes,%
+matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
+
+\usepackage{pgf}
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+
+\usepackage{authblk}
+\renewcommand\Authfont{\sf\Large}
+\renewcommand\Affilfont{\rm\small}
+
+
+
+
+
+%%%%%%%%%%%%%% MACRO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\email}[1]{{\href{mailto:#1}{\nolinkurl{#1}}}}
+
+\usepackage{bm}
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\mat}[1]{\bm{#1}}
+\newcommand{\set}[1]{\mathcal{#1}}
+
+% https://tex.stackexchange.com/questions/265689/ignore-greek-letters-using-mathcal
+\DeclareMathSymbol{\Gamma}{\mathord}{operators}{"00}
+\DeclareMathSymbol{\Delta}{\mathord}{operators}{"01}
+\DeclareMathSymbol{\Theta}{\mathord}{operators}{"02}
+\DeclareMathSymbol{\Lambda}{\mathord}{operators}{"03}
+\DeclareMathSymbol{\Xi}{\mathord}{operators}{"04}
+\DeclareMathSymbol{\Pi}{\mathord}{operators}{"05}
+\DeclareMathSymbol{\Sigma}{\mathord}{operators}{"06}
+\DeclareMathSymbol{\Upsilon}{\mathord}{operators}{"07}
+\DeclareMathSymbol{\Phi}{\mathord}{operators}{"08}
+\DeclareMathSymbol{\Psi}{\mathord}{operators}{"09}
+\DeclareMathSymbol{\Omega}{\mathord}{operators}{"0A}
+
+\newcommand{\LB}{\mathsf{LB}}
+\newcommand{\UB}{\mathsf{UB}}		
+			
+\usepackage{xcolor}
+\newcommand{\note}[1]{{\Large\bf#1}}
+\newcommand{\bluenote}[1]{{\Large\color{blue}#1}}
+\newcommand{\rednote}[1]{{\Large\color{red}#1}}
+
+\usepackage{etoolbox}
+% To use, for example, \Ac for \mathcal{A}.  Requires "etoolbox" package
+\makeatletter
+\def\do#1{\@namedef{#1c}{\ensuremath{\mathcal{#1}}}}
+\docsvlist{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
+\makeatother
+
+\def\Eb{\mathbb{E}}
+\def\Rb{\mathbb{R}}
+%\def\response{[$\Longrightarrow$]}
+
+\newenvironment{response}
+{ [$\Longrightarrow$]\sf }
+{ \hfill \rule{1ex}{1ex} }
+
+\newcommand{\dx}{\mathop{}\!\mathrm{d}x}
+\newcommand{\dy}{\mathop{}\!\mathrm{d}y}
+\newcommand{\dz}{\mathop{}\!\mathrm{d}z}
+\newcommand{\dt}{\mathop{}\!\mathrm{d}t}
+
+\renewcommand{\bar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To show LaTeX code examples
+
+\usepackage{fancyvrb,listings}
+\lstset{
+   breaklines=true,
+   basicstyle=\linespread{0.8}\ttfamily\scriptsize,
+   aboveskip=0pt,
+   belowskip=0pt
+}
+\newenvironment{example}
+ {\VerbatimOut{\jobname.tmp}}
+ {\endVerbatimOut
+ \begin{center}
+ \fbox{
+	 \begin{minipage}[c]{\textwidth}
+	  \lstinputlisting{\jobname.tmp}
+	 \end{minipage}
+   }
+ \fbox{
+ 	\begin{minipage}[c]{\textwidth}
+	 \input{\jobname.tmp}
+  	\end{minipage}
+  }
+  \end{center}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\title{Suggestions for the Mathematical Notation}
+\author{}
+\date{}
+
+
+\begin{document}
+
+\maketitle
+
+A good notation helps easier reading. Consistency is the key. Try to follow these suggestions. 
+\begin{example}
+\begin{description}
+\item [Sets:] $\set{B}_i$, $\set{K}$
+\item [Vectors:] $\vec{x}$, $\vec{\xi}$
+\item [Matrices:] $\mat{A}$
+\item [Elements of vectors and matrices:] $x_j$, $\xi_j$, $a_{ij}$
+\item [Textual names:] $Z_{\text{WDP}}$, $u^{\min}$, $\mathsf{UB}$
+\item [Random variables:] $X$, $Y$
+\item [Expected value:] $\Eb[X]$, $\Eb[g(Y)]$
+\item [Set of real numbers:] $\Rb$, $\Rb^n$, $\Rb^n \times \Rb^m$, $\Rb^{n+m}$
+\end{description}
+\end{example}
+
+Note that many macros are used. Check the preamble of this \texttt{.tex} file.
+
+Some other suggestions:
+
+\begin{enumerate}
+\item Try to use the same alphabet for related concepts. For example:
+	\begin{enumerate}
+	\item A vector $\vec{x}$ belongs to set $\set{X}$. Similarly, $\vec{\gamma}\in\set{\Gamma}$
+	\item The bound on variable $q_i$ is $Q_i$.
+	\item Set of time periods: $\set{T} = \{1,2,...,T\}$ and each time period $t\in\set{T}$. The final time period is $T$. If you need a dummy index for time, consider $\tau$ or $s$:
+		\begin{itemize}
+		\item $\displaystyle x_t = \sum_{\tau=t}^T y_\tau$
+		\item $\displaystyle y_t = \sum_{s=t}^T z_s$		
+		\end{itemize}
+	\item When $\phi(\cdot)$ is a function, its integral may be $\Phi(x) = \int_0^x \phi(y) \dy$. Similarly $F(x) = \int_0^x f(y) \dy$.
+	\end{enumerate}
+\item If you need to use bar/hat/tilde, try to keep the meaning of them consistent. For example:
+	\begin{enumerate}
+	\item If you use $\bar{x}$ to denote a solution obtained by CPLEX, then $\bar{y}$ should also be a solution obtained by CPLEX.
+	\item If you use $\tilde{\vec{x}}$ to denote an approximation to vector $\vec{x}$, then $\tilde{\mat{A}}$ should also be an approximation to matrix $\mat{A}$ and $\tilde{f}(\vec{x})$ should be an approximation to function $f(\vec{x})$.
+	\end{enumerate}
+\item Use Roman alphabets for primal variables $x$, $y$, $z$ and Greek alphabets for dual variables $\xi$, $\gamma$, $\theta$.
+\item Try to avoid text in your notation. If you have to, try the followings:
+	\begin{enumerate}
+	\item $Z_{\text{WDP}}$ instead of $Z_{WDP}$. Is $W$, $D$, and $P$ are separate indices for $Z$? Or does it mean $W \times D \times P$?
+	\item $\text{(profit)} = \text{(revenue)} - \text{(cost)} $ instead of $profit = revenue - cost$. It looks $profit = p\times r\times o\times f\times i\times t$.
+	\item If you want to define a textual variable name such as UB and LB for upper and lower bounds, for example, then try to use $\mathsf{UB}$ and $\mathsf{LB}$. While UB can be a \emph{generic} shorthand for the text ``upper bound'', $\mathsf{UB}$ is a mathematical symbol that has a \emph{specific} definition. You can use $\mathsf{UB}$ during the algorithm description; for example, ``Update as follows: $\mathsf{UB} \gets \min\{\mathsf{UB}, f(x^*) + g(x^*; \bar{y})\}$.''
+		\begin{itemize}
+		\item worst: The optimality gap is defined as $(UB - LB)/LB$.
+		\item better: The optimality gap is defined as $(\text{UB} - \text{LB})/\text{LB}$.
+		\item best: The optimality gap is defined as $(\mathsf{UB} - \mathsf{LB})/\mathsf{LB}$.
+		\end{itemize}
+		It may be useful to define macros
+			\begin{verbatim}
+			\newcommand{\LB}{\mathsf{LB}}
+			\newcommand{\UB}{\mathsf{UB}}			
+			\end{verbatim}
+		 Then use as
+		 \begin{verbatim}
+		 (\UB - \LB) / \LB	
+		 \frac{\UB - \LB}{\LB}
+		 \end{verbatim}
+		\item Similarly, CVaR is a \emph{generic} acronym for the text `conditional value-at-risk', and $\mathsf{CVaR}_\alpha$ is a \emph{specific} math symbol with $\alpha$ as a probability threshold.	 
+	\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
+
+
+
+
+
+
+
+%
