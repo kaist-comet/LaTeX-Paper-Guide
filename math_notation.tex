@@ -7,63 +7,18 @@
 % layout/spacing related packages
 \usepackage[margin=1in]{geometry}
 \usepackage{setspace}\onehalfspace
-\usepackage{microtype}
-
 
 % Math related packages
 \usepackage{amsmath} \allowdisplaybreaks
 \usepackage{amssymb}
 \usepackage{amsthm}
-%\theoremstyle{definition}    % if you want normal upright font styles for theorems.
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{assumption}{Assumption}
-\newtheorem{proposition}{Proposition}
-\newtheorem{definition}{Definition}
-
-
-% bibliography and reference related packcages
-\usepackage{natbib}
-\usepackage{bibentry}
-
-
-\usepackage{booktabs} % for toprule, midrule, bottomrule
-\usepackage{graphicx}
-\usepackage{appendix}
-\usepackage[counterclockwise]{rotating} % for sidewaystable
-\usepackage{subcaption} % for subfigure
-\usepackage[normalem]{ulem} % for uline
-\usepackage{showexpl}
-\usepackage{threeparttable} % for tables with footnotes
-
-\usepackage[hyphens]{url}
-\usepackage[bookmarks=false,hidelinks]{hyperref}
-
-\usepackage{tikz}
-\usetikzlibrary{automata,calc,trees,positioning,arrows,chains,shapes.geometric,%
-decorations.pathreplacing,decorations.pathmorphing,shapes,%
-matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
-
-\usepackage{pgf}
-\pgfdeclarelayer{background}
-\pgfdeclarelayer{foreground}
-\pgfsetlayers{background,main,foreground}
-
-
-\usepackage{authblk}
-\renewcommand\Authfont{\sf\Large}
-\renewcommand\Affilfont{\rm\small}
-
-
 
 
 
 %%%%%%%%%%%%%% MACRO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\email}[1]{{\href{mailto:#1}{\nolinkurl{#1}}}}
-
 \usepackage{bm}
-\renewcommand{\vec}[1]{\bm{#1}}
-\newcommand{\mat}[1]{\bm{#1}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\mat}[1]{\vec{#1}}
 \newcommand{\set}[1]{\mathcal{#1}}
 
 % https://tex.stackexchange.com/questions/265689/ignore-greek-letters-using-mathcal
@@ -82,11 +37,6 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 \newcommand{\LB}{\mathsf{LB}}
 \newcommand{\UB}{\mathsf{UB}}		
 			
-\usepackage{xcolor}
-\newcommand{\note}[1]{{\Large\bf#1}}
-\newcommand{\bluenote}[1]{{\Large\color{blue}#1}}
-\newcommand{\rednote}[1]{{\Large\color{red}#1}}
-
 \usepackage{etoolbox}
 % To use, for example, \Ac for \mathcal{A}.  Requires "etoolbox" package
 \makeatletter
@@ -96,11 +46,6 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 
 \def\Eb{\mathbb{E}}
 \def\Rb{\mathbb{R}}
-%\def\response{[$\Longrightarrow$]}
-
-\newenvironment{response}
-{ [$\Longrightarrow$]\sf }
-{ \hfill \rule{1ex}{1ex} }
 
 \newcommand{\dx}{\mathop{}\!\mathrm{d}x}
 \newcommand{\dy}{\mathop{}\!\mathrm{d}y}
