@@ -144,7 +144,7 @@ matrix,shapes.symbols,plotmarks,decorations.markings,shadows}
 \newenvironment{textexample}
  {\VerbatimOut{\jobname.tmp}}
  {\endVerbatimOut
-  \lstset{basicstyle=\linespread{1.0}\ttfamily\normalsize}
+  \lstset{basicstyle=\linespread{1.0}\ttfamily\footnotesize}
   \begin{framed}\lstinputlisting{\jobname.tmp}\end{framed}
   
  \begin{framed}\noindent\input{\jobname.tmp}\end{framed}
@@ -191,22 +191,22 @@ Graduate students of Dr. Kwon are encouraged to follow his tastes. \texttt{:)}}
 
 \section{Editor} \label{sec:editor}
 
-For macOS users, I recommend TeXShop and BibDesk, which are included in the MacTeX distributions: \url{https://tug.org/mactex/}.
-
-For most people, I also recommend VS Code with the LaTeX Workshop extension by James Yu for editing .tex files and JabRef (a reference management tool) for editing .bib files. These are included in your LaTeX distributions---TeXLive recommended---and are available for all major operation systems: \url{https://www.tug.org/texlive/}.
+For macOS users, I recommend TeXShop and BibDesk, which are included in the MacTeX distributions: \url{https://tug.org/mactex/}. 
+Generally, I also recommend VS Code with the `LaTeX Workshop' extension by James Yu for editing .tex files and JabRef (a reference management tool) for editing .bib files. These are included in your LaTeX distributions---TeXLive recommended---and are available for all major operation systems: \url{https://www.tug.org/texlive/}.
 In Ubuntu, \texttt{sudo apt install texlive-full}.
 
 Most LaTeX editors have a built-in PDF viewer.
 LaTeX users should use forward/backward PDF sync.
 After compiling your .tex file, do `Ctrl + Click' or `Command + Click' on some text part in the .tex file.
 It will send you to the corresponding part in the output PDF file.
-While reading your PDF file (in TeXworks), also do `Ctrl + Click' or `Command + Click' on some text part in the .pdf file.
+While reading your PDF file (in TeXworks), also use `Ctrl + Click' or `Command + Click' on some text in the .pdf file.
 It will again send you to the corresponding part in the source TeX file.
 Use this functionality to read this document.
 By the way, the sync will not work for boxed code and text.
 
-
-
+\section{Overleaf}
+Overleaf is an excellent online LaTeX editor for collaboration.
+However, I prefer using LaTeX locally and collaborate via GitHub.com. 
 
 
 
@@ -215,30 +215,44 @@ By the way, the sync will not work for boxed code and text.
 
 
 \section{Text} \label{sec:paragraph}
+
 \begin{textexample}
-In LaTeX, just enter an empty line for a new paragraph.
+In LaTeX, just enter an empty line for a new paragraph. 
 
-Like this. Some random text: But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
+Like this. Some random text: But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born, and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
 
-And like this.
+The first graph in a new section does not have an indentation. 
+It is a standard style of writing in English.
+The subsequent paragraphs have an indentation.
+Line changes in the LaTeX code do not create a new paragraph.
+Only an empty line creates a new paragraph.
+
 Some more random text: 
 To take a trivial example, 
 which of us ever undertakes laborious physical exercise, 
 except to obtain some advantage from it? 
-But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, 
+But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences 
 or one who avoids a pain that produces no resultant pleasure?
+
 \end{textexample}
+
+\newpage
 
 \subsection{Do not use backslashes}
 
 \begin{textexample}
 Don't use double backslashes \verb|\\| for a new paragraph as done in this paragraph.
 Double backslashes will be used in tables and equations only.
-Some random text: But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. \\
-If you use double backslashes for a new paragraph, it will look very bad.
-Some more random text: To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+Some random text: But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born, and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. \\
+If you use double backslashes for a new paragraph, it will look very bad. Check the indentation.
+Some more random text: To take a trivial example, which of us ever undertakes laborious physical exercise except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences or one who avoids a pain that produces no resultant pleasure?\\
+
+If you use double backslashes \emph{and} an empty line for a new paragraph, it will give you double empty lines.
+Some more random text: To take a trivial example, which of us ever undertakes laborious physical exercise except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences or one who avoids a pain that produces no resultant pleasure?\\
+Please compare this with the text on the previous page.
 \end{textexample}
 
+\newpage
 
 \subsection{Emphasizing}
 If you want to \emph{emphasize} some \emph{words}, use \verb|\emph{...words..}|, instead of \verb|\textit{...words..}|.
@@ -410,6 +424,12 @@ I usually use lower-case Greek letters for dual variables: $\lambda_i$, $\rho_j$
 Upper-case Greek letters may be some special sets or sets of dual variables: $\Lambda$, $\Theta$, etc.
 If you used $a$ for something, then you better use $\vec{a}$, $\mat{A}$, $A$, and $\Ac$ for something related to $a$, as much as you can.
 \end{textexample}
+
+
+Read also `\texttt{math\_notation.pdf}' for more on the mathematical notation: \url{https://github.com/kaist-comet/LaTeX-Paper-Template/blob/master/math_notation.pdf}.
+
+
+
 
 \subsection{Multiple-line equations}
 
