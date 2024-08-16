@@ -1,4 +1,4 @@
-# LaTeX Paper Template
+# LaTeX Paper Guide
 
 If you didn't install LaTeX or this is your first time to use LaTeX, go [here](https://stom.chkwon.net/latex/) for some guidelines.
 
